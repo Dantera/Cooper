@@ -1,6 +1,8 @@
 #!/usr/bin/env python2
 #encoding: UTF-8
 
+import time
+
 class Worker:
     
     def __init__(self, title, task, data, interval = 0):
@@ -11,8 +13,9 @@ class Worker:
         self.quit = False
         
     def run(self):
-        while not quit:
+        while not self.quit:
             self.data = self.task.read()
+            time.sleep(self.interval)
 
     def getTitle(self):
         return self.title
