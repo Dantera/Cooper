@@ -71,3 +71,22 @@ class Temperature(Sensor):
             temp_f = (temp_c * (9.0 / 5.0)) + 32.0
             return temp_f #, temp_c
 
+class WaterLevel(Sensor):
+	
+	def __init__(self, pin):
+		Sensor.__init__(self)
+		self.pin = pin
+
+class Humidity(Sensor):
+
+	def __init__(self, pin):
+		Sensor.__init__(self)
+
+class Variable(Sensor):
+
+	def __init__(self):
+		Sensor.__init__(self, spectrum, preCallback, postCallback)
+		#if preCallback != false: preCalback(self)
+		self.spectrum = spectrum
+		# if postCallback != false: postCallback(self)
+		
